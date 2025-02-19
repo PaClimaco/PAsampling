@@ -30,7 +30,7 @@ pip install PAsampling
 
 ### Install via Git
 ```bash
-git clone https://github.com/yourusername/PAsampling.git
+git clone https://github.com/PaClimaco/PAsampling.git
 cd PAsampling
 pip install .
 ```
@@ -43,7 +43,7 @@ Here is a basic example of how to use PAsampling:
 from PAsampling import *
 # Example usage (Farthest Point Sampling on QM dataset)
 
-datasets =  Dataset('./data') # data_loader function
+datasets =  DataLoader('./data') # data_loader function
 x, labels = datasets.QM7_dataset()
 fps_sampler = FPS() # FPS sampler class
 fps_indices = fps_sampler.fit(x, initial_subset=[0], b_samples= 100) # Fit FPS to data matrix
