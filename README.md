@@ -1,5 +1,5 @@
 # Passive Sampling (PAsampling)
-This is a project founded and developed by the [Rhine-Ruhr Center for Scientific Data Literacy](https://www.dkz2r.de/) (DKZ.2R). DKZ.2R is one the eleven Data Literacy Centers in Germany, that were founded in 2023. The goal of DKZ.2R reduce data-related hurdles in research, train and support researchers in methodological data literacy in a holistic way, and promote data-competent scientists. 
+This is a project founded  by the [Rhine-Ruhr Center for Scientific Data Literacy](https://www.dkz2r.de/) (DKZ.2R),which is one the eleven Data Literacy Centers in Germany. The goal of DKZ.2R reduce data-related hurdles in research, train and support researchers in methodological data literacy in a holistic way, and promote data-competent scientists. 
 
 ## Overview
 Passive Sampling (PAsampling) is a repository designed to provide easy and fast access to existing and novel tools and resources for data sampling. This project aims to facilitate the implementation of data sampling techniques and provide insights on key aspects of data selection in machine learning, with a particular focus on training data selection for optimizing regression model performance. The term "Passive" refers to the fact that the library mainly focuses on selection approaches that rely solely on data feature representations and do not involve any active learning procedures, which require iterative learning of one or several models. Additionally, the library provides tools for creating machine learning experiment pipelines.
@@ -7,12 +7,12 @@ Passive Sampling (PAsampling) is a repository designed to provide easy and fast 
 ## Features
 
 - PAsampling includes several data sampling methods
-    - [Farthest Point Sampling (FPS)](./PAsampling/functions/fps.py)  
-    - [Density Aware Farthest Point (DAFPS)](.PAsampling/functions/da_fps.py) 
-    - [k-medoids++](./PAsampling/function_wraps/kmedoids_sampler.py)
-    - [FacilityLocation](./PAsampling/function_wraps/facility_location_sampler.py)
-    - [Twin](./PAsampling/function_wraps/twin_sampler.py)
-    - [FPS_Sampler](./PAsampling/function_wraps/modified_samplers.py)
+    - [Farthest Point Sampling (FPS)](./PAsampling/native_functions/fps.py)  
+    - [Density Aware Farthest Point (DAFPS)](./PAsampling/native_functions/da_fps.py) 
+    - [k-medoids++](./PAsampling/wrappers/kmedoids_sampler.py)
+    - [FacilityLocation](./PAsampling/wrappers/facility_location_sampler.py)
+    - [Twin](./PAsampling/wrappers/twin_sampler.py)
+    - [FPS_Sampler](./PAsampling/wrappers/modified_samplers.py)
 
 - ML pipeline tools
     - [DataLoader](./PAsampling/utils/data_loader.py)
