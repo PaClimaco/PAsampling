@@ -63,13 +63,13 @@ Tutorials
 ---------
 
 Explore the tutorials to learn how to use the PAsampling library tools and gain key insights into data sampling in machine learning.
-   - `Basic key concepts <../PAsampling/Tutorials/basic_concepts.ipynb>`_
-   - `Training data selection for regression model performance optimization <../PAsampling/Tutorials/Training_data_selection.ipynb>`_
+   - `Basic key concepts <https://github.com/PaClimaco/PAsampling/blob/main/Tutorials/basic_concepts.ipynb>`_
+   - `Training data selection for regression model performance optimization <https://github.com/PaClimaco/PAsampling/blob/main/Tutorials/Training_data_selection.ipynb>`_
 
 Contributing
 ------------
 
-We welcome contributions! Please read our `contributing guidelines <../CONTRIBUTING.md>`_ to get started. All contributors will be acknowledged and credited.
+We welcome contributions! Please read our `contributing guidelines <https://github.com/PaClimaco/PAsampling/blob/main/CONTRIBUTING.md>`_ to get started. All contributors will be acknowledged and credited.
 
 Contact
 -------
