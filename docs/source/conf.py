@@ -11,10 +11,8 @@
 # Path to your Python modules
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../PAsapling'))  # Adjust this path if necessary
-sys.path.insert(0, os.path.abspath('../PAsampling/native_functions'))  
-sys.path.insert(0, os.path.abspath('../PAsampling/wrappers')) 
-sys.path.insert(0, os.path.abspath('../PAsampling/utils')) 
+sys.path.insert(0, os.path.abspath('../../PAsapling'))  # Adjust this path if necessary
+
 
 project = 'PAsampling'
 copyright = '2025, Paolo Climaco'
