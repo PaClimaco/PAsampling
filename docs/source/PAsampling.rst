@@ -8,21 +8,20 @@ Overview
 
 Passive Sampling (PAsampling) is a repository designed to provide easy and fast access to existing and novel tools and resources for data sampling. This project aims to facilitate the implementation of data sampling techniques and provide insights on key aspects of data selection in machine learning, with a particular focus on training data selection for optimizing regression model performance. The term "Passive" refers to the fact that the library mainly focuses on selection approaches that rely solely on data feature representations and do not involve any active learning procedures, which require iterative learning of one or several models. Additionally, the library provides tools for creating machine learning experiment pipelines.
 
-
 Features
 --------
 
 - PAsampling includes several data sampling methods:\
-    - `Farthest Point Sampling (FPS) <https://github.com/PaClimaco/PAsampling/tree/main/PAsampling/native_functions/fps.py>`_ 
-    - `Density Aware Farthest Point (DAFPS) <https://github.com/PaClimaco/PAsampling/tree/main/PAsampling/native_functions/da_fps.py>`_
-    - `k-medoids++ <https://github.com/PaClimaco/PAsampling/tree/main/PAsampling/wrappers/kmedoids_sampler.py>`_
-    - `FacilityLocation <https://github.com/PaClimaco/PAsampling/tree/main/PAsampling/wrappers/facility_location_sampler.py>`_
-    - `Twin <https://github.com/PaClimaco/PAsampling/tree/main/PAsampling/wrappers/twin_sampler.py>`_
-    - `FPS_Sampler <https://github.com/PaClimaco/PAsampling/tree/main/PAsampling/wrappers/modified_samplers.py>`_
+   - `Farthest Point Sampling (FPS) <https://github.com/PaClimaco/PAsampling/tree/main/PAsampling/native_functions/fps.py>`_ 
+   - `Density Aware Farthest Point (DAFPS) <https://github.com/PaClimaco/PAsampling/tree/main/PAsampling/native_functions/da_fps.py>`_
+   - `k-medoids++ <https://github.com/PaClimaco/PAsampling/tree/main/PAsampling/wrappers/kmedoids_sampler.py>`_
+   - `FacilityLocation <https://github.com/PaClimaco/PAsampling/tree/main/PAsampling/wrappers/facility_location_sampler.py>`_
+   - `Twin <https://github.com/PaClimaco/PAsampling/tree/main/PAsampling/wrappers/twin_sampler.py>`_
+   - `FPS_Sampler <https://github.com/PaClimaco/PAsampling/tree/main/PAsampling/wrappers/modified_samplers.py>`_
 
 - ML pipeline tools:\
-    - `DataLoader <https://github.com/PaClimaco/PAsampling/tree/main/PAsampling/utils/data_loader.py>`_
-    - `DataSelector <https://github.com/PaClimaco/PAsampling/tree/main/PAsampling/utils/data_selection.py>`_
+   - `DataLoader <https://github.com/PaClimaco/PAsampling/tree/main/PAsampling/utils/data_loader.py>`_
+   - `DataSelector <https://github.com/PaClimaco/PAsampling/tree/main/PAsampling/utils/data_selection.py>`_
 
 Installation
 ------------
@@ -34,16 +33,16 @@ Install via PyPI
 
 .. code-block:: bash
 
-    pip install PAsampling
+   pip install PAsampling
 
 Install via Git
 ~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
-    git clone https://github.com/PaClimaco/PAsampling.git
-    cd PAsampling
-    pip install .
+   git clone https://github.com/PaClimaco/PAsampling.git
+   cd PAsampling
+   pip install .
 
 Usage
 -----
@@ -53,19 +52,19 @@ Here is a basic example of how to use PAsampling:
 .. code-block:: python
 
    from PAsampling import *
-    # Example usage (Farthest Point Sampling on QM dataset)
+   # Example usage (Farthest Point Sampling on QM dataset)
 
-    datasets =  DataLoader('./data') # data_loader function
-    x, labels = datasets.QM7_dataset()
-    fps_sampler = FPS()  # FPS sampler class
-    fps_indices = fps_sampler.fit(x, initial_subset=[0], b_samples=100)  # Fit FPS to data matrix
+   datasets =  DataLoader('./data') # data_loader function
+   x, labels = datasets.QM7_dataset()
+   fps_sampler = FPS()  # FPS sampler class
+   fps_indices = fps_sampler.fit(x, initial_subset=[0], b_samples=100)  # Fit FPS to data matrix
 
 Tutorials
 ---------
 
 Explore the tutorials to learn how to use the PAsampling library tools and gain key insights into data sampling in machine learning.
-    - `Basic key concepts <../PAsampling/Tutorials/basic_concepts.ipynb>`_
-    - `Training data selection for regression model performance optimization <../PAsampling/Tutorials/Training_data_selection.ipynb>`_
+   - `Basic key concepts <../PAsampling/Tutorials/basic_concepts.ipynb>`_
+   - `Training data selection for regression model performance optimization <../PAsampling/Tutorials/Training_data_selection.ipynb>`_
 
 Contributing
 ------------
@@ -84,3 +83,4 @@ Some of the functions implemented in PAsampling are wraps of functions from the 
 
 - `Apricot <https://github.com/jmschrei/apricot>`_ (MIT License)
 - `twinning <https://github.com/avkl/twinning>`_ (Apache 2.0 License)
+
