@@ -7,13 +7,13 @@ Passive Sampling (PAsampling) is a repository designed to provide easy and fast 
 ## Features
 
 - PAsampling includes several data sampling methods
-    - [Farthest Point Sampling (FPS)](./PAsampling/native_functions/fps.py)  
     - [Density Aware Farthest Point (DAFPS)](./PAsampling/native_functions/da_fps.py) 
-    - [k-medoids++](./PAsampling/wrappers/kmedoids_sampler.py)
     - [FacilityLocation](./PAsampling/wrappers/facility_location_sampler.py)
+    - [Farthest Point Sampling (FPS)](./PAsampling/native_functions/fps.py) 
+    - [FPS_plus](./PAsampling/wrappers/modified_samplers.py)
+    - [k-medoids++](./PAsampling/wrappers/kmedoids_sampler.py)
     - [Twin](./PAsampling/wrappers/twin_sampler.py)
-    - [FPS_Sampler](./PAsampling/wrappers/modified_samplers.py)
-
+    
 - ML pipeline tools
     - [DataLoader](./PAsampling/utils/data_loader.py)
     - [DataSelector](./PAsampling/utils/data_selection.py)

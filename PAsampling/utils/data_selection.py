@@ -44,6 +44,7 @@ def DataSelector(X, save_path, strategies=None, trainig_set_sizes=None, initial_
         List of ratios for the Twinning strategy.
     gamma_FacLocG : float, optional
         Gamma parameter for the FacilityLocation strategy with Gaussian metric. Default is 1.
+        
     Returns:
     --------
     None

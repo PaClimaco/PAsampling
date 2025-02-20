@@ -29,6 +29,15 @@ Welcome to PAsampling's documentation!
    wrappers/kmedoids_sampler.rst
    wrappers/twin_sampler.rst
 
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: ML pipeline tools
+
+   utils/data_loader.rst
+   utils/data_selection.rst
+
 .. toctree::
    :maxdepth: 1
    :hidden:

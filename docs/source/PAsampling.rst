@@ -12,13 +12,13 @@ Features
 --------
 
 - PAsampling includes several data sampling methods:\
-   - `Farthest Point Sampling (FPS) <https://github.com/PaClimaco/PAsampling/tree/main/PAsampling/native_functions/fps.py>`_ 
    - `Density Aware Farthest Point (DAFPS) <https://github.com/PaClimaco/PAsampling/tree/main/PAsampling/native_functions/da_fps.py>`_
-   - `k-medoids++ <https://github.com/PaClimaco/PAsampling/tree/main/PAsampling/wrappers/kmedoids_sampler.py>`_
    - `FacilityLocation <https://github.com/PaClimaco/PAsampling/tree/main/PAsampling/wrappers/facility_location_sampler.py>`_
+   - `Farthest Point Sampling (FPS)  <https://github.com/PaClimaco/PAsampling/tree/main/PAsampling/native_functions/fps.py>`_ 
+   - `FPS_Plus <https://github.com/PaClimaco/PAsampling/tree/main/PAsampling/wrappers/modified_samplers.py>`_
+   - `k-medoids++ <https://github.com/PaClimaco/PAsampling/tree/main/PAsampling/wrappers/kmedoids_sampler.py>`_
    - `Twin <https://github.com/PaClimaco/PAsampling/tree/main/PAsampling/wrappers/twin_sampler.py>`_
-   - `FPS_Sampler <https://github.com/PaClimaco/PAsampling/tree/main/PAsampling/wrappers/modified_samplers.py>`_
-
+   
 - ML pipeline tools:\
    - `DataLoader <https://github.com/PaClimaco/PAsampling/tree/main/PAsampling/utils/data_loader.py>`_
    - `DataSelector <https://github.com/PaClimaco/PAsampling/tree/main/PAsampling/utils/data_selection.py>`_

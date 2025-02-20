@@ -12,11 +12,13 @@ from sklearn.preprocessing import MinMaxScaler
 class DataLoader:
     """
     A class used to load and preprocess various datasets.
-    Attributes:
+    
+    Parameters:
     -----------
-    save_path : str
-        The path where data will be saved. Default ./data
-    --------
+        save_path (str): The directory where the datasets will be saved. Default is the current working directory.
+    
+    Attributes:
+    -----------  
     unzip_file(file_path, extract_to='.'):
         Unzips a compressed file (zip or tar) to a specified directory.
     download_data(url, save_path):
@@ -25,7 +27,9 @@ class DataLoader:
         Downloads and processes the QM7 dataset, with optional preprocessing.
     Power_Grid_dataset(normalize=True):
         Loads and preprocesses the Power Grid dataset, with optional normalization.
+        
     """
+    
     def __init__(self, save_path=None):
         # Initialize the Dataset class with a specified save_path or the current working directory
         self.save_path = save_path if save_path else os.getcwd()
@@ -77,15 +81,16 @@ class DataLoader:
         """
         Downloads and processes the QM7 dataset.
 
-        Args:
+        Parameters:
+        -----------
             preprocessing (bool): If True, extracts the upper triangular entries of each matrix in the dataset.
                                     If False, reshapes the matrices into vectors. Default is True.
 
         Returns:
+        --------
             tuple: A tuple containing:
                 - features (np.ndarray): The processed feature matrix.
                 - labels (np.ndarray): The labels corresponding to the feature matrix.
-
         """
         # Download and process QM7 dataset
         qm7_url = 'http://quantum-machine.org/data/qm7.mat'
@@ -124,9 +129,11 @@ class DataLoader:
             optionally normalizes the features, and returns the feature vectors and labels.
             
             Parameters:
+            -----------
             normalize (bool): If True, the feature vectors will be normalized using MinMaxScaler. Default is True.
             
             Returns:
+            --------
             tuple: A tuple containing:
                 - features (numpy.ndarray): The feature vectors.
                 - labels (numpy.ndarray): The target labels.
