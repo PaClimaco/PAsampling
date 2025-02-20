@@ -11,7 +11,7 @@
 # Path to your Python modules
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../../PAsapling'))  # Adjust this path if necessary
+sys.path.insert(0, os.path.abspath('../../'))  # Adjust this path if necessary
 
 
 project = 'PAsampling'
@@ -23,11 +23,17 @@ release = '0.0.1'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 # Add 'sphinx.ext.autodoc' to the extensions list
+
 extensions = [
-    'sphinx.ext.autodoc',
+    'sphinx.ext.duration',
+    'sphinx.ext.doctest',
     'sphinx.ext.napoleon',  # For Google-style docstrings
     'sphinx.ext.viewcode',  # To link to source code in docs
+    'sphinx.ext.autodoc',
+    'sphinx.ext.autosummary',
 ]
+
+
 
 #templates_path = ['_templates']
 exclude_patterns = []

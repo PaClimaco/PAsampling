@@ -9,5 +9,12 @@ Welcome to PAsampling's documentation!
 
    PAsampling.rst
 
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Functions
+
+   functions/dafps.rst
+
   
 
