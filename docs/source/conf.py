@@ -30,9 +30,13 @@ extensions = [
     'sphinx.ext.napoleon',  # For Google-style docstrings
     'sphinx.ext.viewcode',  # To link to source code in docs
     'sphinx.ext.autodoc',
+     'sphinx.ext.mathjax',
     'sphinx.ext.autosummary',
+    'sphinx.ext.todo',
+    'sphinx.ext.coverage',
     'nbsphinx',
 ]
+
 system_packages: true
 
 

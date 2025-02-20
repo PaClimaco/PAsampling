@@ -2,6 +2,8 @@ FPS
 ===
 
 .. automodule:: PAsampling.wrappers.FPS
-        :members:
+        :members: 
         :inherited-members:
+
+
 
