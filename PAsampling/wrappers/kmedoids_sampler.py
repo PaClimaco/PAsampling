@@ -23,7 +23,13 @@ class Kmedoids:
     --------
     fit(X):
         Fits the kmedoids function to the data matrix X, with shape (n_samples, n_features), and returns the indices of the selected samples (medoids).
+        
+    Returns:
+    --------
+    Samples : list
+        List of indices representing the selected points using the kmedoids algorithm.
     """
+    
     def __init__(self, b_samples, init='k-medoids++', metric='euclidean', random_state=None,  max_iter=300):
         self.b_samples =b_samples
         self.init = init

@@ -31,7 +31,9 @@ extensions = [
     'sphinx.ext.viewcode',  # To link to source code in docs
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
+    'nbsphinx',
 ]
+
 
 
 

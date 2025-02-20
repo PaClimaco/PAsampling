@@ -29,7 +29,13 @@ class FacilityLocation:
         Fits the function to the data X, with shape (n_samples, n_features), and returns the indices of the selected samples.
         If the metric is 'Gaussian', the gamma parameter is used to compute the RBF kernel matrix.
         If the metric is 'precomputed', the input X is assumed to be a precomputed distance matrix.
+        
+    Returns:
+    --------
+    Samples : list
+        List of indices representing the selected points using the FacilityLocation algorithm.
     """
+    
     def __init__(self, b_samples, metric='euclidean',initial_subset=None, verbose=False, n_jobs=-1):
         self.b_samples = b_samples
         self.metric = metric

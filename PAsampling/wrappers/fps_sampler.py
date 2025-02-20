@@ -30,11 +30,12 @@ class FPS:
         verbose : bool, optional (default=False)
             If True, progress messages are printed.
 
-        Returns:
-        --------
-        centers : list
-            List of indices representing the selected points using the FPS algorithm.
+    Returns:
+    --------
+    Samples : list
+        List of indices representing the selected points using the FPS algorithm.
     """
+    
     def __init__(self, precomputed_distances= False):
         self.precomputed_distances = precomputed_distances
 

@@ -3,6 +3,7 @@ from scipy.spatial import cKDTree
 import numpy as np
 
 class DAFPS:
+    
     """
     Implements the Density-Aware Farthest Point Sampling (DA-FPS) algorithm.
 
@@ -27,6 +28,7 @@ class DAFPS:
     --------
     fit(initial_subset, b_samples, mu=0, distance_func=None, verbose=False):
         Fits the model to the data X and returns the indices of the selected samples.
+        
         Parameters:
         -----------
         initial_subset : list
@@ -43,8 +45,10 @@ class DAFPS:
         Returns:
         --------
         centers : list
-            List of indices representing the selected points using the DA-FPS algorithm.
+            List of indices representing the selected points using the DAFPS algorithm.
+        
     """
+    
     def __init__(self, X, d=None, knn=100, weights=None, precomputed_distances=False):
         self.knn = knn
         self.X = X

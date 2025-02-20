@@ -43,11 +43,12 @@ class FPS_Sampler:
         random_state : int, optional (default=None)
             The seed used by the random number generator.
 
-        Returns:
-        --------
-        centers : list
-            List of indices representing the selected points using the modified FPS algorithm.
+    Returns:
+    --------
+    Samples : list
+        List of indices representing the selected points using the modified FPS algorithm.
     """
+    
     def __init__(self, method='kmedoids', mu=3):
         self.method = method
         self.mu = mu

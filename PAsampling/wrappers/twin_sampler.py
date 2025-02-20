@@ -16,7 +16,14 @@ class Twin:
     -------
     fit(X)
         Fits the twin function to the data X, with shape (n_sample, n_features) and returns the result as a list.
+    
+ 
+    Returns:
+    --------
+    Samples : list
+        List of indices representing the selected points using the Twin algorithm.   
     """
+    
     def __init__(self, ratio, idx_initial_point):
         self.r = ratio
         self.u1 = idx_initial_point

@@ -10,9 +10,7 @@ import os
 
 def fps_np(X, initialization, b, distance_func=None, precomputed_distances=False, verbose = False):
     """
-    Selects a set of points using the Farthest Point Sampling (FPS) algorithm.
-
-    This function implements the FPS algorithm, which selects a subset of points from a dataset
+    This function implements the Farthest Point Sampling (FPS) algorithm using the numpy library. FPS selects a subset of points from a dataset
     by iteratively choosing the point that is farthest from the current set of selected points.
 
     Parameters:

@@ -5,10 +5,8 @@ import os
 
 def da_fps_np(X, initialization, b, d = None, distance_func=None, precomputed_distances=False, weights=None, verbose = False):
     """
-    Selects a set of points using the Density-Aware Farthest Point Sampling (DA-FPS) algorithm.
-
-    This function implements the DA-FPS algorithm, which selects a subset of points from a dataset
-    by iteratively choosing the point that is farthest from the current set of selected points,
+    This function implements the Density Aware Farthest Point Sampling (DAFPS) algorithm using the numpy library.
+    DAFPS selects a subset of points from a dataset by iteratively choosing the point that is farthest from the current set of selected points,
     while also considering the density of points in the neighborhood of each selected point.
 
     Parameters:
