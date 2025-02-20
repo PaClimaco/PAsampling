@@ -30,7 +30,7 @@ Welcome to PAsampling's documentation!
    wrappers/twin_sampler.rst
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :hidden:
    :caption: tutorials
 
