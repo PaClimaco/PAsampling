@@ -1,5 +1,6 @@
 sphinx
 sphinx_rtd_theme
+ipykernel
 nbsphinx
 numpy<2.0.0
 ipywidgets

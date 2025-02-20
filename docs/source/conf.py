@@ -33,7 +33,7 @@ extensions = [
     'sphinx.ext.autosummary',
     'nbsphinx',
 ]
-
+system_packages: true
 
 
 
