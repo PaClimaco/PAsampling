@@ -10,7 +10,7 @@ class FacilityLocation:
     of a subset of samples from a dataset based on the facility location strategy. The selection can be 
     performed using different metrics, including 'euclidean', 'Gaussian', and 'precomputed'.
 
-    Parameters:
+    Attributes:
     -----------
     b_samples : int
         The number of samples to select.

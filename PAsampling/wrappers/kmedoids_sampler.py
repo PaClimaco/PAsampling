@@ -8,7 +8,7 @@ class Kmedoids:
     of a subset of samples from a dataset based on the k-medoids clustering strategy. The selection
     can be performed using different initialization methods and distance metrics.
 
-    Parameters:
+    Attributes:
     -----------
     b_samples : int
         The number of samples to select (i.e., the number of clusters).

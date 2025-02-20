@@ -13,40 +13,45 @@ class FPS_Sampler:
     It allows for the selection of a subset of samples from a dataset based on the FPS strategy, followed by 
     additional selection using different methods such as k-medoids, facility location, random sampling, and twinning.
 
-    Parameters:
+    Attributes:
     -----------
     method : str, optional (default='kmedoids')
-        The sampling method to use after the initial FPS selection. Options are 'kmedoids', 'facility_location', 'random', and 'twin'.
+        The sampling method to use after the initial FPS selection. Options are 'kmedoids', 
+        'facility_location', 'random', and 'twin'.
+
     mu : int, optional (default=3)
         The number of initial points to select using FPS before applying the respective strategy.
 
     Methods:
     --------
     fit(X, initial_subset, b_samples, metric='euclidean', ratio=5, idx_initial_point=0, init_kmedoids='k-medoids++', random_state=None):
+    
         Fits the model to the data X and returns the indices of the selected samples.
-        Parameters:
-        -----------
-        X : numpy.ndarray (n_samples, n_features)
-            Input points, representing a set of data points.
-        initial_subset : list
-            List of indices (rows of the input points matrix) representing the initial set of selected elements.
-        b_samples : int
-            The desired number of points to select.
-        metric : str, optional (default='euclidean')
-            The metric to use for computing distances. Options are 'euclidean', 'manhattan', etc.
-        ratio : int, optional (default=5)
-            The ratio parameter for the twinning method.
-        idx_initial_point : int, optional (default=0)
-            The initial point index for the twinning method.
-        init_kmedoids : str, optional (default='k-medoids++')
-            The method for initialization in k-medoids. Options are 'random', 'heuristic', 'k-medoids++', and 'build'.
-        random_state : int, optional (default=None)
-            The seed used by the random number generator.
+        
+    Parameters:
+    -----------
+    X : numpy.ndarray (n_samples, n_features)
+        Input points, representing a set of data points.
+    initial_subset : list
+        List of indices (rows of the input points matrix) representing the initial set of selected elements.
+    b_samples : int
+        The desired number of points to select.
+    metric : str, optional (default='euclidean')
+        The metric to use for computing distances. Options are 'euclidean', 'manhattan', etc.
+    ratio : int, optional (default=5)
+        The ratio parameter for the twinning method.
+    idx_initial_point : int, optional (default=0)
+        The initial point index for the twinning method.
+    init_kmedoids : str, optional (default='k-medoids++')
+        The method for initialization in k-medoids. Options are 'random', 'heuristic', 'k-medoids++', and 'build'.
+    random_state : int, optional (default=None)
+        The seed used by the random number generator.
 
     Returns:
     --------
     Samples : list
         List of indices representing the selected points using the modified FPS algorithm.
+        
     """
     
     def __init__(self, method='kmedoids', mu=3):

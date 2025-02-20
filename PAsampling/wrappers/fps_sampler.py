@@ -8,7 +8,7 @@ class FPS:
     of a subset of samples from a dataset based on the FPS strategy. The selection can be 
     performed using different distance functions and can handle precomputed distance matrices.
 
-    Parameters:
+    Attributes:
     -----------
     precomputed_distances : bool, optional (default=False)
         If True, the input X is assumed to be a precomputed distance matrix.
@@ -17,18 +17,19 @@ class FPS:
     --------
     fit(X, initial_subset, b_samples, distance_func=None, verbose=False):
         Fits the model to the data X and returns the indices of the selected samples.
-        Parameters:
-        -----------
-        X : numpy.ndarray
-            Input data matrix, representing a set of data points or precomputed distance matrix.
-        initial_subset : list
-            List of indices (rows of the input points matrix) representing the initial set of selected elements.
-        b_samples : int
-            The desired number of points to select.
-        distance_func : callable, optional (default=None)
-            A function to compute pairwise distances. If None, Euclidean distance is used.
-        verbose : bool, optional (default=False)
-            If True, progress messages are printed.
+        
+    Parameters:
+    -----------
+    X : numpy.ndarray
+        Input data matrix, representing a set of data points or precomputed distance matrix.
+    initial_subset : list
+        List of indices (rows of the input points matrix) representing the initial set of selected elements.
+    b_samples : int
+        The desired number of points to select.
+    distance_func : callable, optional (default=None)
+        A function to compute pairwise distances. If None, Euclidean distance is used.
+    verbose : bool, optional (default=False)
+        If True, progress messages are printed.
 
     Returns:
     --------

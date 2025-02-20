@@ -3,7 +3,6 @@ from scipy.spatial import cKDTree
 import numpy as np
 
 class DAFPS:
-    
     """
     Implements the Density-Aware Farthest Point Sampling (DA-FPS) algorithm.
 
@@ -11,7 +10,7 @@ class DAFPS:
     of a subset of samples from a dataset based on the DA-FPS strategy. The selection can be 
     performed using different distance functions and can handle precomputed distance matrices.
 
-    Parameters:
+    Attributes:
     -----------
     X : numpy.ndarray (n_samples, n_features)
         Input points, representing a set of data points.
@@ -29,23 +28,23 @@ class DAFPS:
     fit(initial_subset, b_samples, mu=0, distance_func=None, verbose=False):
         Fits the model to the data X and returns the indices of the selected samples.
         
-        Parameters:
-        -----------
-        initial_subset : list
-            List of indices (rows of the input points matrix) representing the initial set of selected elements.
-        b_samples : int
-            The desired number of points to select.
-        mu : int, optional (default=0)
-            The number of initial points to select using FPS before applying the DA-FPS algorithm.
-        distance_func : callable, optional (default=None)
-            A function to compute pairwise distances. If None, Euclidean distance is used.
-        verbose : bool, optional (default=False)
-            If True, progress messages are printed.
+    Parameters:
+    -----------
+    initial_subset : list
+        List of indices (rows of the input points matrix) representing the initial set of selected elements.
+    b_samples : int
+        The desired number of points to select.
+    mu : int, optional (default=0)
+        The number of initial points to select using FPS before applying the DA-FPS algorithm.
+    distance_func : callable, optional (default=None)
+        A function to compute pairwise distances. If None, Euclidean distance is used.
+    verbose : bool, optional (default=False)
+        If True, progress messages are printed.
 
-        Returns:
-        --------
-        centers : list
-            List of indices representing the selected points using the DAFPS algorithm.
+    Returns:
+    --------
+    centers : list
+        List of indices representing the selected points using the DAFPS algorithm.
         
     """
     

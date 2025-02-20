@@ -5,23 +5,23 @@ class Twin:
     """
     This class implements the twin function from the Twinning library https://github.com/avkl/twinning.
 
-    Parameters:
-    ----------
+    Attributes:
+    -----------
     r : float
         The ratio parameter for the twin function.
     u1 : int
         The initial point index for the twin function.
 
-    Methods
-    -------
+    Methods:
+    --------
     fit(X)
         Fits the twin function to the data X, with shape (n_sample, n_features) and returns the result as a list.
     
- 
     Returns:
     --------
     Samples : list
-        List of indices representing the selected points using the Twin algorithm.   
+        List of indices representing the selected points using the Twin algorithm.  
+         
     """
     
     def __init__(self, ratio, idx_initial_point):
