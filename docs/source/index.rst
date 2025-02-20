@@ -25,7 +25,7 @@ Welcome to PAsampling's documentation!
    wrappers/dafps_sampler.rst
    wrappers/facility_location_sampler.rst
    wrappers/fps_sampler.rst
-   wrappers/modified_samplers.rst
+   wrappers/fps_plus_sampler.rst
    wrappers/kmedoids_sampler.rst
    wrappers/twin_sampler.rst
 

@@ -7,7 +7,7 @@ __all__ = [
         'Twin',
         'FPS', 
         'DAFPS', 
-        'FPS_Sampler',
+        'FPS_plus',
         'DataLoader',
         'DataSelector'
         ]

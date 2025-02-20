@@ -8,7 +8,7 @@ from ..wrappers.facility_location_sampler import FacilityLocation
 from ..wrappers.twin_sampler import Twin
 from ..wrappers.fps_sampler import FPS
 from ..wrappers.dafps_sampler import DAFPS
-from ..wrappers.modified_samplers import FPS_Sampler
+from ..wrappers.fps_plus_sampler import FPS_plus
 np.random.seed(123)
 
 def save_indices_to_h5py(group_train, group_test, trainig_set_sizes, indices, idx_test):
@@ -133,7 +133,7 @@ def DataSelector(X, save_path, strategies=None, trainig_set_sizes=None, initial_
             subgrup_test = grp.create_group(f'test_Initialize_{count}')
             idx_test = list(np.arange(X.shape[0]))
             for n in  trainig_set_sizes:
-                modified_sampler = FPS_Sampler(method='kmedoids', mu=mu)
+                modified_sampler = FPS_plus(method='kmedoids', mu=mu)
                 idx_train = modified_sampler.fit(X, initial_subset=[initial_sub], b_samples=n, random_state=count)
                 idx_test=  list(set(idx_test).difference(idx_train)) 
                 subgrup_train.create_dataset(f'selected_{n}', data = idx_train) 
@@ -145,7 +145,7 @@ def DataSelector(X, save_path, strategies=None, trainig_set_sizes=None, initial_
         for count, initial_sub in tqdm(enumerate(initial_conditions, 1)):
             subgrup_train = grp.create_group(f'train_Initialize_{count}')
             subgrup_test = grp.create_group(f'test_Initialize_{count}')
-            modified_sampler = FPS_Sampler(method='facility_location', mu=mu)
+            modified_sampler = FPS_plus(method='facility_location', mu=mu)
             modified_indices = modified_sampler.fit(X, initial_subset=[initial_sub], b_samples=max(trainig_set_sizes))
             idx_test = list(np.arange(X.shape[0]))
             save_indices_to_h5py(subgrup_train, subgrup_test, trainig_set_sizes,  modified_indices, idx_test) 
@@ -156,7 +156,7 @@ def DataSelector(X, save_path, strategies=None, trainig_set_sizes=None, initial_
         for count, initial_sub in tqdm(enumerate(initial_conditions, 1)):
             subgrup_train = grp.create_group(f'train_Initialize_{count}')
             subgrup_test = grp.create_group(f'test_Initialize_{count}')
-            modified_sampler = FPS_Sampler(method='random', mu=mu)
+            modified_sampler = FPS_plus(method='random', mu=mu)
             modified_indices = modified_sampler.fit(X, initial_subset=[initial_sub], b_samples=max(trainig_set_sizes), random_state=count-1)
             idx_test = list(np.arange(X.shape[0]))
             save_indices_to_h5py(subgrup_train, subgrup_test, trainig_set_sizes,  modified_indices, idx_test)     

@@ -5,7 +5,7 @@ from .facility_location_sampler import FacilityLocation
 from .twin_sampler import Twin
 import random
 
-class FPS_Sampler:
+class FPS_plus:
     """
     Implements a modified version of the Farthest Point Sampling (FPS) algorithm.
 
