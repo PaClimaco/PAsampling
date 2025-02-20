@@ -1,7 +1,7 @@
 FacilityLocation
 ================
 
-.. automodule:: PAsampling.wrappers.FacilityLocation
+.. autoclass:: PAsampling.wrappers.FacilityLocation
         :members:
         :inherited-members:
 

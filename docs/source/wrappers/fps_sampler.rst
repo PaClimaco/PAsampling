@@ -1,9 +1,10 @@
 FPS
 ===
 
-.. automodule:: PAsampling.wrappers.FPS
+.. autoclass:: PAsampling.wrappers.FPS
         :members: 
         :inherited-members:
+        
 
 
 

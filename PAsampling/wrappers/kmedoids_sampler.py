@@ -18,16 +18,6 @@ class Kmedoids:
         The metric to use for computing distances. Options are 'euclidean', 'manhattan', etc.
     random_state : int, optional (default=None)
         The seed used by the random number generator.
-
-    Methods:
-    --------
-    fit(X):
-        Fits the kmedoids function to the data matrix X, with shape (n_samples, n_features), and returns the indices of the selected samples (medoids).
-        
-    Returns:
-    --------
-    Samples : list
-        List of indices representing the selected points using the kmedoids algorithm.
     """
     
     def __init__(self, b_samples, init='k-medoids++', metric='euclidean', random_state=None,  max_iter=300):
@@ -38,6 +28,18 @@ class Kmedoids:
         self.max_iter = max_iter
 
     def fit(self, X,):
+        """ Fits the kmedoids function to the data matrix X, with shape (n_samples, n_features), and returns the indices of the selected samples (medoids).
+        
+        Parameters:
+        -----------
+        X : numpy.ndarray
+            Input data matrix, representing a set of data points.
+        
+        Returns:
+        --------
+        samples : list
+            List of indices representing the selected points using the kmedoids algorithm
+        """
         self.kmedoids = KMedoids(
                                 n_clusters=self.b_samples,
                                 init=self.init,

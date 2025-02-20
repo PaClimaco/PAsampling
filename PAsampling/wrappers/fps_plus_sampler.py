@@ -21,37 +21,7 @@ class FPS_plus:
 
     mu : int, optional (default=3)
         The number of initial points to select using FPS before applying the respective strategy.
-
-    Methods:
-    --------
-    fit(X, initial_subset, b_samples, metric='euclidean', ratio=5, idx_initial_point=0, init_kmedoids='k-medoids++', random_state=None):
     
-        Fits the model to the data X and returns the indices of the selected samples.
-        
-    Parameters:
-    -----------
-    X : numpy.ndarray (n_samples, n_features)
-        Input points, representing a set of data points.
-    initial_subset : list
-        List of indices (rows of the input points matrix) representing the initial set of selected elements.
-    b_samples : int
-        The desired number of points to select.
-    metric : str, optional (default='euclidean')
-        The metric to use for computing distances. Options are 'euclidean', 'manhattan', etc.
-    ratio : int, optional (default=5)
-        The ratio parameter for the twinning method.
-    idx_initial_point : int, optional (default=0)
-        The initial point index for the twinning method.
-    init_kmedoids : str, optional (default='k-medoids++')
-        The method for initialization in k-medoids. Options are 'random', 'heuristic', 'k-medoids++', and 'build'.
-    random_state : int, optional (default=None)
-        The seed used by the random number generator.
-
-    Returns:
-    --------
-    Samples : list
-        List of indices representing the selected points using the modified FPS algorithm.
-        
     """
     
     def __init__(self, method='kmedoids', mu=3):
@@ -59,6 +29,33 @@ class FPS_plus:
         self.mu = mu
         
     def fit(self, X, initial_subset, b_samples, metric='euclidean', ratio = 5, idx_initial_point = 0, init_kmedoids = 'k-medoids++', random_state=None):
+        """Fits the model to the data X and returns the indices of the selected samples.
+        
+        Parameters:
+        -----------
+        X : numpy.ndarray (n_samples, n_features)
+            Input points, representing a set of data points.
+        initial_subset : list
+            List of indices (rows of the input points matrix) representing the initial set of selected elements.
+        b_samples : int
+            The desired number of points to select.
+        metric : str, optional (default='euclidean')
+            The metric to use for computing distances. Options are 'euclidean', 'manhattan', etc.
+        ratio : int, optional (default=5)
+            The ratio parameter for the twinning method.
+        idx_initial_point : int, optional (default=0)
+            The initial point index for the twinning method.
+        init_kmedoids : str, optional (default='k-medoids++')
+            The method for initialization in k-medoids. Options are 'random', 'heuristic', 'k-medoids++', and 'build'.
+        random_state : int, optional (default=None)
+            The seed used by the random number generator.
+
+        Returns:
+        --------
+        samples : list
+            List of indices representing the selected points using the modified FPS algorithm.
+    
+        """
         if self.method == 'kmedoids':
             return self.fps_kmedoids(X, initial_subset,  b_samples, metric, init_kmedoids, random_state)
         elif self.method == 'facility_location':

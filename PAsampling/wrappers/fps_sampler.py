@@ -35,7 +35,7 @@ class FPS:
 
         Returns:
         --------
-        Samples : list
+        samples : list
             List of indices representing the selected points using the FPS algorithm.
             
         """

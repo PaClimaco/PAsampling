@@ -1,6 +1,6 @@
 Twin
 ====
 
-.. automodule:: PAsampling.wrappers.Twin
+.. autoclass:: PAsampling.wrappers.Twin
         :members:
         :inherited-members:

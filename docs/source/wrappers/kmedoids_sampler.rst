@@ -1,6 +1,6 @@
 Kmedoids
 ========
 
-.. automodule:: PAsampling.wrappers.Kmedoids
+.. autoclass:: PAsampling.wrappers.Kmedoids
         :members:
         :inherited-members:

@@ -23,17 +23,6 @@ class FacilityLocation:
     n_jobs : int, optional (default=-1)
         The number of parallel jobs to run. -1 means using all processors.
 
-    Methods:
-    --------
-    fit(X, gamma=0.1):
-        Fits the function to the data X, with shape (n_samples, n_features), and returns the indices of the selected samples.
-        If the metric is 'Gaussian', the gamma parameter is used to compute the RBF kernel matrix.
-        If the metric is 'precomputed', the input X is assumed to be a precomputed distance matrix.
-        
-    Returns:
-    --------
-    Samples : list
-        List of indices representing the selected points using the FacilityLocation algorithm.
     """
     
     def __init__(self, b_samples, metric='euclidean',initial_subset=None, verbose=False, n_jobs=-1):
@@ -44,6 +33,24 @@ class FacilityLocation:
         self.n_jobs = n_jobs
 
     def fit(self, X, gamma = 0.1):
+        """ 
+        Fits the function to the data X, with shape (n_samples, n_features), and returns the indices of the selected samples.
+        If the metric is 'Gaussian', the gamma parameter is used to compute the RBF kernel matrix.
+        If the metric is 'precomputed', the input X is assumed to be a precomputed distance matrix.
+        
+        Parameters:
+        -----------
+        X : numpy.ndarray
+            Input data matrix, representing a set of data points or precomputed distance matrix.
+        gamma : float, optional (default=0.1)
+            The gamma parameter for the RBF kernel matrix.
+        
+        Returns:
+        --------
+        Samples : list
+            List of indices representing the selected points using the FacilityLocation algorithm.
+        
+        """
         if self.metric == 'euclidean':
             self.selector = FacilityLocationSelection(
                                                     self.b_samples, 

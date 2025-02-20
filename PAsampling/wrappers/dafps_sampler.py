@@ -22,30 +22,7 @@ class DAFPS:
         Array of weights for each point. If provided, these weights are used to adjust the selection process.
     precomputed_distances : bool, optional (default=False)
         If True, the input X is assumed to be a precomputed distance matrix.
-
-    Methods:
-    --------
-    fit(initial_subset, b_samples, mu=0, distance_func=None, verbose=False):
-        Fits the model to the data X and returns the indices of the selected samples.
-        
-    Parameters:
-    -----------
-    initial_subset : list
-        List of indices (rows of the input points matrix) representing the initial set of selected elements.
-    b_samples : int
-        The desired number of points to select.
-    mu : int, optional (default=0)
-        The number of initial points to select using FPS before applying the DA-FPS algorithm.
-    distance_func : callable, optional (default=None)
-        A function to compute pairwise distances. If None, Euclidean distance is used.
-    verbose : bool, optional (default=False)
-        If True, progress messages are printed.
-
-    Returns:
-    --------
-    centers : list
-        List of indices representing the selected points using the DAFPS algorithm.
-        
+                
     """
     
     def __init__(self, X, d=None, knn=100, weights=None, precomputed_distances=False):
@@ -82,6 +59,26 @@ class DAFPS:
                 self.d = None
                     
     def fit(self, initial_subset, b_samples, mu=0, distance_func=None, verbose=False):
+        """Fits the model to the data X and returns the indices of the selected samples. 
+          
+        Parameters:
+        -----------
+        initial_subset : list
+            List of indices (rows of the input points matrix) representing the initial set of selected elements.
+        b_samples : int
+            The desired number of points to select.
+        mu : int, optional (default=0)
+            The number of initial points to select using FPS before applying the DA-FPS algorithm.
+        distance_func : callable, optional (default=None)
+            A function to compute pairwise distances. If None, Euclidean distance is used.
+        verbose : bool, optional (default=False)
+            If True, progress messages are printed.
+
+        Returns:
+        --------
+        samples : list
+            List of indices representing the selected points using the DAFPS algorithm.
+        """ 
         if int(self.X.shape[0]/100*mu)>= b_samples:
             raise ValueError("Choose mu smaller. The value of mu exceeds or equals the labeling budget.")
         if mu == 0:      

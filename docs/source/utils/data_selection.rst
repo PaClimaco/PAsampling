@@ -1,6 +1,6 @@
 DataSelector
 ============
 
-.. automodule:: PAsampling.utils.DataSelector
+.. autoclass:: PAsampling.utils.DataSelector
         :members:
         :inherited-members:

@@ -11,17 +11,7 @@ class Twin:
         The ratio parameter for the twin function.
     u1 : int
         The initial point index for the twin function.
-
-    Methods:
-    --------
-    fit(X)
-        Fits the twin function to the data X, with shape (n_sample, n_features) and returns the result as a list.
-    
-    Returns:
-    --------
-    Samples : list
-        List of indices representing the selected points using the Twin algorithm.  
-         
+        
     """
     
     def __init__(self, ratio, idx_initial_point):
@@ -29,5 +19,17 @@ class Twin:
         self.u1 = idx_initial_point
 
     def fit(self, X):
+        """ Fits the twin function to the data X, with shape (n_sample, n_features) and returns the result as a list.
+        
+        Parameters:
+        -----------     
+        X : numpy.ndarray
+            Input data matrix, representing a set of data points
+        
+        Returns:
+        --------
+        Samples : list
+            List of indices representing the selected points using the Twin algorithm.
+        """
         X = np.asarray(X, dtype=np.float64)
         return twin(X, r=self.r, u1=self.u1).tolist()
