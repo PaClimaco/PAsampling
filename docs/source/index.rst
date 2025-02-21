@@ -15,7 +15,7 @@ This is a project funded by the `Rhine-Ruhr Center for Scientific Data Literacy 
    PAsampling.rst
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :hidden:
    :caption: Native Functions
 
@@ -23,7 +23,7 @@ This is a project funded by the `Rhine-Ruhr Center for Scientific Data Literacy 
    functions/fps.rst
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :hidden:
    :caption: wrappers
 
@@ -36,7 +36,7 @@ This is a project funded by the `Rhine-Ruhr Center for Scientific Data Literacy 
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :hidden:
    :caption: ML pipeline tools
 
