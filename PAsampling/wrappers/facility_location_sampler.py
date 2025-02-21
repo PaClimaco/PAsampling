@@ -41,9 +41,10 @@ class FacilityLocation:
         Parameters:
         -----------
         X : numpy.ndarray
-            Input data matrix, representing a set of data points or precomputed distance matrix.
+            Input data matrix, representing a set of data points.
+            If metric is 'precomputed', X is expected to be the matrix of precomputed pairwise distances.
         gamma : float, optional (default=0.1)
-            The gamma parameter for the RBF kernel matrix.
+            The gamma parameter for the RBF kernel matrix. Used if metric is 'Gaussian'.
         
         Returns:
         --------

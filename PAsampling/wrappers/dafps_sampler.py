@@ -69,6 +69,7 @@ class DAFPS:
             The desired number of points to select.
         mu : int, optional (default=0)
             The number of initial points to select using FPS before applying the DA-FPS algorithm.
+            mu is expressed as a percentage of the total number of samples in the dataset. Default is 0%.
         distance_func : callable, optional (default=None)
             A function to compute pairwise distances. If None, Euclidean distance is used.
         verbose : bool, optional (default=False)

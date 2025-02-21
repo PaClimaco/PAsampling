@@ -24,7 +24,7 @@ class Twin:
         Parameters:
         -----------     
         X : numpy.ndarray
-            Input data matrix, representing a set of data points
+            Input data matrix, representing a set of data points with shape (n_samples, n_features).
         
         Returns:
         --------

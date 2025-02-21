@@ -38,7 +38,7 @@ extensions = [
 ]
 
 system_packages: true
-
+html_title = "Documentation"
 
 
 #templates_path = ['_templates']

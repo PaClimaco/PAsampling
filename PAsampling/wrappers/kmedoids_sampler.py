@@ -15,7 +15,7 @@ class Kmedoids:
     init : str, optional (default='k-medoids++')
         The method for initialization. Options are  are 'random', 'heuristic', 'k-medoids++', and 'build'.
     metric : str, optional (default='euclidean')
-        The metric to use for computing distances. Options are 'euclidean', 'manhattan', etc.
+        What distance metric to use. See sklearn.metrics.pairwise_distances metrics. Metric can be 'precomputed', the user must then feed the fit method with a precomputed kernel matrix and not the design matrix X.
     random_state : int, optional (default=None)
         The seed used by the random number generator.
     """
@@ -28,12 +28,13 @@ class Kmedoids:
         self.max_iter = max_iter
 
     def fit(self, X,):
-        """ Fits the kmedoids function to the data matrix X, with shape (n_samples, n_features), and returns the indices of the selected samples (medoids).
+        """ Fits the kmedoids function to the data matrix X and returns the indices of the selected samples (medoids).
         
         Parameters:
         -----------
         X : numpy.ndarray
-            Input data matrix, representing a set of data points.
+            Input data matrix, representing a set of data points with shape (n_samples, n_features). 
+            If metric is precomputed, X is expected to be the matrix of precomputed pairwise distances.
         
         Returns:
         --------

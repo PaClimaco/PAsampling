@@ -21,6 +21,7 @@ class FPS_plus:
 
     mu : int, optional (default=3)
         The number of initial points to select using FPS before applying the respective strategy.
+        mu is expressed as a percentage of the total number of samples in the dataset. Default is 3%.
     
     """
     

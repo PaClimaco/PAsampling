@@ -10,7 +10,7 @@ class FPS:
     Attributes:
     -----------
     precomputed_distances : bool, optional (default=False)
-        If True, the input X is assumed to be a precomputed distance matrix.
+        If True, the fit function expects a precomputed distance matrix as input.
     
     """
     
@@ -23,7 +23,8 @@ class FPS:
         Parameters:
         -----------
         X : numpy.ndarray
-            Input data matrix, representing a set of data points or precomputed distance matrix.
+            Input data matrix with shape (n_samples, n_features), representing a set of data points.
+            If "precomputed_distances" is True, X is expected to be the matrix of precomputed pairwise distances with shape (n_samples, n_samples).
         initial_subset : list
             List of indices (rows of the input points matrix) representing the initial set of selected elements.
         b_samples : int
