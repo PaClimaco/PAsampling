@@ -61,8 +61,6 @@ exclude_patterns = []
 source_suffix = '.rst'  # or '.md', depending on your documentation source
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
-# Example of adding subfolders in source
-html_static_path = ['wrappers', 'utils',  'functions', 'tutorials']
 
 html_theme = 'sphinx_rtd_theme'
 #html_static_path = ['_static']
