@@ -17,6 +17,7 @@ sys.path.insert(0, os.path.abspath('../../'))  # Adjust this path if necessary
 project = 'PAsampling'
 copyright = '2025, Paolo Climaco'
 author = 'Paolo Climaco'
+version = '0.0.1'
 release = '0.0.1'
 
 # -- General configuration ---------------------------------------------------
@@ -37,8 +38,6 @@ extensions = [
     'nbsphinx',
 ]
 
-system_packages: true
-
 
 html_context = {
     "display_github": True, # Integrate GitHub
@@ -47,10 +46,6 @@ html_context = {
     "github_version": "master", # Version
     "conf_py_path": "/docs/source/", # Path in the checkout to the docs root
 }
-
-
-#templates_path = ['_templates']
-exclude_patterns = []
 
 
 
