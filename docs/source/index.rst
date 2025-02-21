@@ -3,7 +3,7 @@ Passive sampling (PAsampling)
 
 Welcome to PAsampling's documentation!
 
-This is a project founded by the `Rhine-Ruhr Center for Scientific Data Literacy <https://www.dkz2r.de/>`_ (DKZ.2R), which is one of the eleven Data Literacy Centers in Germany. The goal of DKZ.2R is to reduce data-related hurdles in research, train and support researchers in methodological data literacy in a holistic way, and promote data-competent scientists.
+This is a project funded by the `Rhine-Ruhr Center for Scientific Data Literacy <https://www.dkz2r.de/>`_ (DKZ.2R), which is one of the eleven Data Literacy Centers in Germany. The goal of DKZ.2R is to reduce data-related hurdles in research, train and support researchers in methodological data literacy in a holistic way, and promote data-competent scientists.
 
 
 
