@@ -57,5 +57,12 @@ exclude_patterns = []
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
+# Sphinx configuration may also need to include directories where content is stored
+source_suffix = '.rst'  # or '.md', depending on your documentation source
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+
+# Example of adding subfolders in source
+html_static_path = ['wrappers', 'utils',  'functions', 'tutorials']
+
 html_theme = 'sphinx_rtd_theme'
 #html_static_path = ['_static']
