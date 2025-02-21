@@ -4,7 +4,7 @@ setup(
     name='PAsampling',
     version='0.0.1',
     packages=find_packages(),
-     license='MIT',
+    license='MIT',
     install_requires=[
         'numpy<2.0.0',
         'ipywidgets',
@@ -30,4 +30,5 @@ setup(
         "License :: OSI Approved :: MIT License", 
         'Operating System :: OS Independent',
     ],
+    license_files=['LICENSE']
 )
